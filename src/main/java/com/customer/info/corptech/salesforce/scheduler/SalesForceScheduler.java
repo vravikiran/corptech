@@ -33,7 +33,7 @@ public class SalesForceScheduler {
 			LoginResponse loginResponse =  loginOperation.login();
 			salesForceDataService.updateMultipleCustomers(loginResponse, customers);
 		}
-		logger.info("Fixed task scheduled for every 1 min :: Execution Time"+dateFormat.format(LocalDateTime.now()));
+		logger.info("Fixed task scheduled for every Day :: Execution Time"+dateFormat.format(LocalDateTime.now()));
 	}
 
 }
