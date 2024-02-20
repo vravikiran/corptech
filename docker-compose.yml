@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  corptech:
+    image: corptech-java-image
+    ports:
+      - "8080:8080"
+    networks:
+      - customer-mysql
+    depends_on:
+      - mysqldb
+ 
+  mysqldb:
+    image: mysql:8.0
+    networks:
+      - customer-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=walnut16@
+networks:
+  customer-mysql:
