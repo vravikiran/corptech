@@ -85,6 +85,6 @@ public class CustomerController {
 
 	@ExceptionHandler(NoSuchElementException.class)
 	public ResponseEntity<Object> NoValuePresent() {
-		return new ResponseEntity<Object>("No Value Present", new HttpHeaders(), HttpStatus.FORBIDDEN);
+		return new ResponseEntity<Object>("No Value Present", new HttpHeaders(), HttpStatus.NOT_FOUND);
 	}
 }
